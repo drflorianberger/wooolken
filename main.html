@@ -19,7 +19,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;line-height: 1.8;}
 body, html {
   height: 100%;
   color: #777;
@@ -31,31 +31,14 @@ body, html {
   position: relative;
   text-align: center;
   color: white;
-  font-size: 18px;
+  font-size: 20px;
 }
 
-.bottom-left {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-}
-
-.top-left {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-}
-
-.top-right {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-}
-
-.bottom-right {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
+.containerIMGk {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 10px;
 }
 
 .centered {
@@ -132,7 +115,7 @@ body, html {
 <body>
 
 <!-- Navbar (sit on top) -->
-<div class="w3-top">
+<div class="w3-top" style="z-index:10">
   <div class="w3-bar" id="myNavbar">
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-large w3-left" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
@@ -165,7 +148,12 @@ body, html {
   <div class="w3-padding-16"></div>
 </div>
 
-<div class="containerIMG">
+<div class="containerIMG w3-hide-small">
+  <img src="bg2.jpg" alt="Snow" style="width:100%">
+  <div class="centered">A collection of slow crafted one-of-a-kind ceramic pieces that are influenced by my decade long love for Japanese Tea. </div>
+</div>
+
+<div class="containerIMGk w3-hide-medium w3-hide-large">
   <img src="bg2.jpg" alt="Snow" style="width:100%">
   <div class="centered">A collection of slow crafted one-of-a-kind ceramic pieces that are influenced by my decade long love for Japanese Tea. </div>
 </div>
@@ -173,14 +161,14 @@ body, html {
 <!-- <div style="background-image: url(bg.jpg); height: 400px; width: 100pc;">Text here</div> -->
 
 <!-- Spouted Chawan Container -->
-<div class="w3-container" id="sc" style ="background-color:#33221d; color:#ADADAD; text-align: left">
+<div class="w3-container" id="sc" style ="z-index:5; background-color:#33221d; color:#ADADAD; text-align: left">
   <div class="w3-padding-16"></div>
   <div class="w3-content" style="max-width:400px; background-color:#FFFFFF">
 
     <div class="w3-content" style="max-width:300px; background-color:#FFFFFF">
     <h5 class="w3-center w3-padding-16"><span class="w3-tag w3-wide" style ="background-color:#FFFFFF; color:#ADADAD" >SPOUTED CHAWANS</span></h5>
    
-    <div id="sc1" class="carousel slide" data-ride="carousel">
+    <div id="sc1" class="carousel slide" data-ride="carousel" style ="z-index:5">
         <!-- Indicators -->
         <ul class="carousel-indicators">
           <li data-target="#sc1" data-slide-to="0" class="active"></li>
@@ -225,7 +213,7 @@ body, html {
       </p>
       <div class="w3-padding-24"></div>
 
-      <div id="sc2" class="carousel slide" data-ride="carousel">
+      <div id="sc2" class="carousel slide" data-ride="carousel" style ="z-index:5">
         <!-- Indicators -->
         <ul class="carousel-indicators">
           <li data-target="#sc2" data-slide-to="0" class="active"></li>
@@ -271,7 +259,7 @@ body, html {
         
         <div class="w3-padding-24"></div>
 
-      <div id="sc3" class="carousel slide" data-ride="carousel">
+      <div id="sc3" class="carousel slide" data-ride="carousel" style ="z-index:5">
         <!-- Indicators -->
         <ul class="carousel-indicators">
           <li data-target="#sc3" data-slide-to="0" class="active"></li>
@@ -326,7 +314,7 @@ body, html {
   <div class="w3-content" style="max-width:300px; background-color:#FFFFFF">
     <h5 class="w3-center w3-padding-16"><span class="w3-tag w3-wide" style ="background-color:#FFFFFF; color:#ADADAD" >BIG CHAWANS</span></h5>
    
-    <div id="cb1" class="carousel slide" data-ride="carousel">
+    <div id="cb1" class="carousel slide" data-ride="carousel" style ="z-index:5">
         <!-- Indicators -->
         <ul class="carousel-indicators">
           <li data-target="#cb1" data-slide-to="0" class="active"></li>
@@ -384,7 +372,7 @@ body, html {
   <div class="w3-content" style="max-width:300px; background-color:#FFFFFF">
     <h5 class="w3-center w3-padding-16"><span class="w3-tag w3-wide" style ="background-color:#FFFFFF; color:#ADADAD" >SMALL CHAWANS</span></h5>
    
-    <div id="cs1" class="carousel slide" data-ride="carousel">
+    <div id="cs1" class="carousel slide" data-ride="carousel" style ="z-index:5">
         <!-- Indicators -->
         <ul class="carousel-indicators">
           <li data-target="#cs1" data-slide-to="0" class="active"></li>
@@ -421,7 +409,7 @@ body, html {
         </p>
       <div class="w3-padding-24"></div>
 
-      <div id="cs2" class="carousel slide" data-ride="carousel">
+      <div id="cs2" class="carousel slide" data-ride="carousel" style ="z-index:5">
         <!-- Indicators -->
         <ul class="carousel-indicators">
           <li data-target="#cs2" data-slide-to="0" class="active"></li>
@@ -472,7 +460,7 @@ body, html {
   <div class="w3-content" style="max-width:300px; background-color:#FFFFFF">
     <h5 class="w3-center w3-padding-16"><span class="w3-tag w3-wide" style ="background-color:#FFFFFF; color:#ADADAD" >WHISK HOLDERS</span></h5>
    
-    <div id="ws1" class="carousel slide" data-ride="carousel">
+    <div id="ws1" class="carousel slide" data-ride="carousel" style ="z-index:5">
         <!-- Indicators -->
         <ul class="carousel-indicators">
           <li data-target="#ws1" data-slide-to="0" class="active"></li>
@@ -529,7 +517,7 @@ body, html {
   <div class="w3-content" style="max-width:300px; background-color:#FFFFFF">
     <h5 class="w3-center w3-padding-16"><span class="w3-tag w3-wide" style ="background-color:#FFFFFF; color:#ADADAD" >SPOON HOLDERS</span></h5>
    
-    <div id="sh1" class="carousel slide" data-ride="carousel">
+    <div id="sh1" class="carousel slide" data-ride="carousel" style ="z-index:5">
         <!-- Indicators -->
         <ul class="carousel-indicators">
           <li data-target="#sh1" data-slide-to="0" class="active"></li>
@@ -567,7 +555,7 @@ body, html {
         
         <div class="w3-padding-24"></div>
 
-      <div id="sh2" class="carousel slide" data-ride="carousel">
+      <div id="sh2" class="carousel slide" data-ride="carousel" style ="z-index:5">
         <!-- Indicators -->
         <ul class="carousel-indicators">
           <li data-target="#sh2" data-slide-to="0" class="active"></li>
