@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wooolken Teaware</title>
+<link rel="icon" type="image/x-icon" href="logom2.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;line-height: 1.8;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+
+.containerIMG {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+.containerIMGk {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 13px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 800px;
+  width: 800px;
+  height: 200px;
+  background-image: url("bg2.jpg");
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('/w3images/parallax1.jpg');
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("/w3images/parallax2.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("/w3images/parallax3.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+
+.carousel .carousel-control { visibility: hidden; }
+.carousel:hover .carousel-control { visibility: visible; }
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+
+
+/* Make the image fully responsive */
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-control {
+  background-image:none !important;
+  filter:none !important;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top" style="z-index:10">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-large w3-left" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button w3-hide-medium w3-hide-small"> Home</a>
+    <a href="#sc" class="w3-bar-item w3-button w3-hide-medium w3-hide-small"> Spouted Chawans</a>
+    <a href="#cb" class="w3-bar-item w3-button w3-hide-medium w3-hide-small"> Big Chawans</a>
+    <a href="#cs" class="w3-bar-item w3-button w3-hide-medium w3-hide-small"> Small Chawans</a>
+    <a href="#wh" class="w3-bar-item w3-button w3-hide-medium w3-hide-small"> Whisk Holders</a>
+    <a href="#sh" class="w3-bar-item w3-button w3-hide-medium w3-hide-small"> Spoon Holders</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-medium w3-hide-small"> About</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large">
+    <a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
+    <a href="#sc" class="w3-bar-item w3-button" onclick="toggleFunction()">Spouted Chawans</a>
+    <a href="#cb" class="w3-bar-item w3-button" onclick="toggleFunction()">Big Chawans</a>
+    <a href="#cs" class="w3-bar-item w3-button" onclick="toggleFunction()">Small Chawans</a>
+    <a href="#wh" class="w3-bar-item w3-button" onclick="toggleFunction()">Whisk Holders</a>
+    <a href="#sh" class="w3-bar-item w3-button" onclick="toggleFunction()">Spoon Holders</a>
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">About</a>
+
+  </div>
+</div>
+
+<div class="w3-container" style = "text-align: center" id = "home">
+  <div class="w3-padding-32"></div>
+  <img src="logo.png" alt="" height="100">
+  <div class="w3-padding-16"></div>
+</div>
+
+<div class="containerIMG w3-hide-small">
+  <img src="bg2.jpg" alt="Snow" style="width:100%">
+  <div class="centered">A collection of slow crafted one&#8209of&#8209a&#8209kind ceramic pieces that are influenced by my decade long love for Japanese Tea. </div>
+</div>
+
+<div class="containerIMGk w3-hide-medium w3-hide-large">
+  <img src="bg2.jpg" alt="Snow" style="width:100%">
+  <div class="centered">A collection of slow crafted one&#8209of&#8209a&#8209kind ceramic pieces that are influenced by my decade long love for Japanese Tea. </div>
+</div>
+
+<!-- <div style="background-image: url(bg.jpg); height: 400px; width: 100pc;">Text here</div> -->
+
+<!-- Spouted Chawan Container -->
+<div class="w3-container" id="sc" style ="z-index:5; background-color:#33221d; color:#ADADAD; text-align: left">
+  <div class="w3-padding-16"></div>
+  <div class="w3-content" style="max-width:400px; background-color:#FFFFFF">
+
+    <div class="w3-content" style="max-width:300px; background-color:#FFFFFF">
+    <h5 class="w3-center w3-padding-16"><span class="w3-tag w3-wide" style ="background-color:#FFFFFF; color:#ADADAD" >SPOUTED CHAWANS</span></h5>
+   
+    <div id="sc1" class="carousel slide" data-ride="carousel" style ="z-index:5">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#sc1" data-slide-to="0" class="active"></li>
+          <li data-target="#sc1" data-slide-to="1"></li>
+          <li data-target="#sc1" data-slide-to="2"></li>
+          <li data-target="#sc1" data-slide-to="3"></li>
+          <li data-target="#sc1" data-slide-to="4"></li>
+        </ul>
+        
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="scb1a.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="scb1b.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="scb1c.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="scb1d.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="scb1e.jpg" alt="" width="1100" height="500">
+          </div>
+        </div>
+        
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#sc1" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#sc1" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+
+    <p><br>Starry Night Spouted Chawan<br>
+      <font size="2">Glazed Stoneware</font>
+      <br>
+      <font size="2">€ 50</font>
+      </p>
+      <div class="w3-padding-24"></div>
+
+      <div id="sc2" class="carousel slide" data-ride="carousel" style ="z-index:5">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#sc2" data-slide-to="0" class="active"></li>
+          <li data-target="#sc2" data-slide-to="1"></li>
+          <li data-target="#sc2" data-slide-to="2"></li>
+          <li data-target="#sc2" data-slide-to="3"></li>
+          <li data-target="#sc2" data-slide-to="4"></li>
+        </ul>
+        
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="scdba.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="scdbb.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="scdbc.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="scdbd.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="scdbe.jpg" alt="" width="1100" height="500">
+          </div>
+        </div>
+        
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#sc2" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#sc2" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+
+      <p><br>Dark Night Spouted Chawan<br>
+        <font size="2">Glazed Stoneware</font>
+        <br>
+        <font size="2">€ 50</font>
+        </p>
+        
+        <div class="w3-padding-24"></div>
+
+      <div id="sc3" class="carousel slide" data-ride="carousel" style ="z-index:5">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#sc3" data-slide-to="0" class="active"></li>
+          <li data-target="#sc3" data-slide-to="1"></li>
+          <li data-target="#sc3" data-slide-to="2"></li>
+          <li data-target="#sc3" data-slide-to="3"></li>
+        </ul>
+        
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="scgsa.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="scgsb.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="scgsc.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="scgsd.jpg" alt="" width="1100" height="500">
+          </div>
+        </div>
+        
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#sc3" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#sc3" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+
+      <p><br>Gold Speckle Night Spouted Chawan<br>
+        <font size="2">Glazed Stoneware</font>
+        <br>
+        <font size="2">€ 50</font>
+        </p>
+        
+        <div class="w3-padding-24"></div>
+
+  </div>
+  </div>
+</div>
+<!-- Spouted Chawan finished-->
+
+<!-- Chawan Big Container -->
+<div class="w3-container" id="cb" style ="background-color:#33221d; color:#ADADAD; text-align: left">
+  <div class="w3-padding-16"></div>
+  <div class="w3-content" style="max-width:400px; background-color:#FFFFFF">
+
+  <div class="w3-content" style="max-width:300px; background-color:#FFFFFF">
+    <h5 class="w3-center w3-padding-16"><span class="w3-tag w3-wide" style ="background-color:#FFFFFF; color:#ADADAD" >BIG CHAWANS</span></h5>
+   
+    <div id="cb1" class="carousel slide" data-ride="carousel" style ="z-index:5">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#cb1" data-slide-to="0" class="active"></li>
+          <li data-target="#cb1" data-slide-to="1"></li>
+          <li data-target="#cb1" data-slide-to="2"></li>
+          <li data-target="#cb1" data-slide-to="3"></li>
+          <li data-target="#cb1" data-slide-to="4"></li>
+        </ul>
+        
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="cbmwa.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="cbmwb.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="cbmwc.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="cbmwd.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="cbmwe.jpg" alt="" width="1100" height="500">
+          </div>
+        </div>
+        
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#cb1" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#cb1" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+
+      <p><br>Milky Way Chawan Big<br>
+        <font size="2">Glazed Stoneware</font>
+        <br>
+        <font size="2">€ 45</font>
+        </p>
+         <div class="w3-padding-24"></div>
+
+  </div>
+  </div>
+</div>
+<!--Chawan Big finished-->
+
+<!-- Chawan small Container -->
+<div class="w3-container" id="cs" style ="background-color:#33221d; color:#ADADAD; text-align: left">
+  <div class="w3-padding-16"></div>
+  <div class="w3-content" style="max-width:400px; background-color:#FFFFFF">
+
+  <div class="w3-content" style="max-width:300px; background-color:#FFFFFF">
+    <h5 class="w3-center w3-padding-16"><span class="w3-tag w3-wide" style ="background-color:#FFFFFF; color:#ADADAD" >SMALL CHAWANS</span></h5>
+   
+    <div id="cs1" class="carousel slide" data-ride="carousel" style ="z-index:5">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#cs1" data-slide-to="0" class="active"></li>
+          <li data-target="#cs1" data-slide-to="1"></li>
+          <li data-target="#cs1" data-slide-to="2"></li>
+        </ul>
+        
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="csdba.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="csdbb.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="csdbc.jpg" alt="" width="1100" height="500">
+          </div>
+        </div>
+        
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#cs1" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#cs1" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+
+      <p><br>Dark Night Chawan Small<br>
+        <font size="2">Glazed Stoneware</font>
+        <br>
+        <font size="2">€ 35</font>
+        </p>
+      <div class="w3-padding-24"></div>
+
+      <div id="cs2" class="carousel slide" data-ride="carousel" style ="z-index:5">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#cs2" data-slide-to="0" class="active"></li>
+          <li data-target="#cs2" data-slide-to="1"></li>
+          <li data-target="#cs2" data-slide-to="2"></li>
+        </ul>
+        
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="csla.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="cslb.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="cslc.jpg" alt="" width="1100" height="500">
+          </div>
+        </div>
+        
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#cs2" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#cs2" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+      <p><br>Cloudy Sky Grooves Chawan Small<br>
+        <font size="2">Glazed Stoneware</font>
+        <br>
+        <font size="2">€ 40</font>
+        </p>
+          <div class="w3-padding-24"></div>
+
+
+  </div>
+  </div>
+</div>
+<!--Container finished-->
+
+
+<!-- Whisk Container -->
+<div class="w3-container" id="wh" style ="background-color:#33221d; color:#ADADAD; text-align: left">
+  <div class="w3-padding-16"></div>
+  <div class="w3-content" style="max-width:400px; background-color:#FFFFFF">
+
+  <div class="w3-content" style="max-width:300px; background-color:#FFFFFF">
+    <h5 class="w3-center w3-padding-16"><span class="w3-tag w3-wide" style ="background-color:#FFFFFF; color:#ADADAD" >WHISK HOLDERS</span></h5>
+   
+    <div id="ws1" class="carousel slide" data-ride="carousel" style ="z-index:5">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#ws1" data-slide-to="0" class="active"></li>
+          <li data-target="#ws1" data-slide-to="1"></li>
+          <li data-target="#ws1" data-slide-to="2"></li>
+          <li data-target="#ws1" data-slide-to="3"></li>
+          <li data-target="#ws1" data-slide-to="4"></li>
+        </ul>
+        
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="cl1a.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="cl1b.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="cl1c.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="cl1d.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="cl1e.jpg" alt="" width="1100" height="500">
+          </div>
+        </div>
+        
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#ws1" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#ws1" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+      <p><br>Cloudy Sky Whisk Holder<br>
+        <font size="2">Glazed Stoneware</font>
+        <br>
+        <font size="2">€ 48</font>
+        </p>
+          <div class="w3-padding-24"></div>
+
+  </div>
+  </div>
+</div>
+<!--whisk holder finished-->
+
+<!-- spoon holder Container -->
+<div class="w3-container" id="sh" style ="background-color:#33221d; color:#ADADAD; text-align: left">
+  <div class="w3-padding-16"></div>
+  <div class="w3-content" style="max-width:400px; background-color:#FFFFFF">
+
+  <div class="w3-content" style="max-width:300px; background-color:#FFFFFF">
+    <h5 class="w3-center w3-padding-16"><span class="w3-tag w3-wide" style ="background-color:#FFFFFF; color:#ADADAD" >SPOON HOLDERS</span></h5>
+   
+    <div id="sh1" class="carousel slide" data-ride="carousel" style ="z-index:5">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#sh1" data-slide-to="0" class="active"></li>
+          <li data-target="#sh1" data-slide-to="1"></li>
+          <li data-target="#sh1" data-slide-to="2"></li>
+        </ul>
+        
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="shfna.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="shfnb.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="shfnc.jpg" alt="" width="1100" height="500">
+          </div>
+        </div>
+        
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#sh1" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#sh1" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+
+      <p><br>Night Sky Faceted Spoon Holder<br>
+        <font size="2">Glazed Stoneware</font>
+        <br>
+        <font size="2">€ 22</font>
+        </p>
+        
+        <div class="w3-padding-24"></div>
+
+      <div id="sh2" class="carousel slide" data-ride="carousel" style ="z-index:5">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#sh2" data-slide-to="0" class="active"></li>
+          <li data-target="#sh2" data-slide-to="1"></li>
+          <li data-target="#sh2" data-slide-to="2"></li>
+        </ul>
+        
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="shrna.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="shrnb.jpg" alt="" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="shrnc.jpg" alt="" width="1100" height="500">
+          </div>
+        </div>
+        
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#sh2" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#sh2" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+      <p><br>Night Sky Stone Spoon Holder<br>
+        <font size="2">Glazed Stoneware</font>
+        <br>
+        <font size="2">€ 20</font>
+        </p>
+         <div class="w3-padding-24"></div>
+
+  </div>
+
+  </div>
+  <div class="w3-padding-16"></div>
+</div>
+<!--spoon holder finished-->
+
+
+<div class="w3-container w3-padding-32" id="about" style ="background-color:#FFFFFF; color:#ADADAD; text-align: center">
+  <h5 class="w3-center w3-padding-16"><span class="w3-tag w3-wide" style ="background-color:#FFFFFF; color:#ADADAD" >WOOOLKEN TEAWARE created by Hildrun Dreyer*</span></h5>
+<div class="w3-xlarge w3-section">
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <div class="w3-content" style="max-width:800px; background-color:#FFFFFF">
+  <p>*You might be wondering why a someone like me—a random white kid—is making Japanese Teaware? Honestly, I've asked myself this question many times—to the point this project almost didn't happen. All I can tell you is that for some reason Japanese Tea and the art of making Teaware for it fascinates me and gives me comfort already longer than a decade. I gained much of my knowledge about the fine details of Japanese Tea production and taste notes working at Kettl, New York, in 2019. My ceramic training started at Earthworks in New York in 2016. I've been expanding my ceramic knowledge at ShiroOni residency in Japan in 2023 and at different studios here in Amsterdam since 2019.
+If you are interested in any of my pieces or have questions or feedback, please contact me. I hope you can find it in your heart to be kind! I look forward to hearing from you!
+</p>
+</div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <div class="w3-padding-64"></div>
+  <div class="w3-padding-64"></div>
+  <div class="w3-padding-64"></div>
+
+</div>
+
+
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
